@@ -1,0 +1,60 @@
+﻿@model Book
+
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="ImageURL" hidden />
+    <div class="row">
+        <div class="col-10">
+            <div class="border p-3 mt-5">
+                <div class="row pb-3 "><h2 class="text-primary">@(Model == null ? "Add Book" : "Update Book")</h2><hr /></div>
+                <div class="mb-3">
+                    <label asp-for="BookName" class=" p-0"></label>
+                    <input asp-for="BookName" class="form-control" />
+                    <span asp-validation-for="BookName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="BookTypeID" class=" p-0"></label>
+                    <select asp-for="BookTypeID" asp-items="ViewBag.BookTypeList" class="form-select"> </select>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Description" class=" p-0"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Writer" class=" p-0"></label>
+                    <input asp-for="Writer" class="form-control" />
+                    <span asp-validation-for="Writer" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Price" class=" p-0"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ImageURL" class=" p-0"></label>
+                    <input type="file" name="file" class="form-control" />
+                </div>
+
+            </div>
+            @if (Model != null)
+            {
+                <button type="submit" class="btn btn-lg btn-primary" style="width:200px">Update Book</button>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-lg btn-primary" style="width:200px">Add Book</button>
+            }
+
+            <a asp-controller="Book" asp-action="Index" class="btn btn-lg btn-primary" style="width:200px">Books</a>
+        </div>
+        <div class="col-2">
+            @if(Model != null)
+            {
+                <img src="@Model.ImageURL" width="100%" style="border-radius:7px; border:1px solid #bbb9b9" />
+            }    
+        </div>
+    </div>
+
+
+
+</form>
