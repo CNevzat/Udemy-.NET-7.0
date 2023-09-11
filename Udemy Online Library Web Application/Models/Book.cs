@@ -18,13 +18,16 @@ namespace UdemyWebApplication.Models
         [Range(10, 5000)] // Fiyat aralığı
         public double Price { get; set; }
         [ValidateNever]
+        public string ImageURL { get; set; }
+
         //Foreign Key
+        [ValidateNever]
         public int BookTypeID { get; set; }
         [ForeignKey("BookTypeID")]
         [ValidateNever]
         public BookType BookType { get; set; }
-        [ValidateNever]
-        public string ImageURL { get; set; }
+       
+      
 
 
     }

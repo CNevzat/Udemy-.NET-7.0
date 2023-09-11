@@ -89,25 +89,8 @@ namespace UdemyWebApplication.Controllers
             }
             return View();
         }
-        //     public IActionResult UpdateBook(int? id)
-        //     {
-        //if (id == null || id == 0)
-        //{
-        //	return NotFound();
-        //}
-        //     }
-        //[HttpPost]
-        //public IActionResult UpdateBook(Book book) 
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        _bookRepository.Update(book);
-        //        _bookRepository.Save();
-        //        TempData["Successful"] = "Book has been updated";
-        //        return RedirectToAction("Index", "Book");
-        //    }
-        //    return View();
-        //}
+     
+
         [Authorize(Roles = UserRoles.Role_Admin)]
         public IActionResult DeleteBook(int? id)
         {
@@ -122,6 +105,8 @@ namespace UdemyWebApplication.Controllers
             }
             return View(bookVT);
         }
+
+
         [Authorize(Roles = UserRoles.Role_Admin)]
         [HttpPost, ActionName("DeleteBook")]
         public IActionResult Delete(int? id)

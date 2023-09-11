@@ -9,7 +9,7 @@ namespace UdemyWebApplication.Models
         public int ID { get; set; }
         [Required(ErrorMessage = "Type name cannot be empty!")] //not null
         [MaxLength(25)]
-        [DisplayName("Book Type")]
+        [DisplayName("BookType")]
         public string Name { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vze5r6Ubl6rZL+DFGaxW6HK7MlVAhMjmq4KRBfw1ALHDFDC+L3kKYR++n9e94coDYRyZnfB+zi4G4Yd9XFP9Ug==",
+  "dgSpecHash": "0ITjphph/eRQHWBFAUiP9otsMtxot00vrQuGQ3GpC6dTSz3fDHL4mo2/kQXTUezqihkYxSDpXavhiTL/rYVgZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ncirp\\Desktop\\UdemyWebApplication\\UdemyWebApplication.csproj",
+  "projectFilePath": "C:\\Users\\ncirp\\source\\repos\\Udemy Online Library Web Application\\UdemyWebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ncirp\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ncirp\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
